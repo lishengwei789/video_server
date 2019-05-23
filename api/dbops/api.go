@@ -4,8 +4,6 @@ import (
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
 	"log"
-	"github.com/avenssi/video_server/api/defs"
-	"github.com/avenssi/video_server/api/utils"
 )
 
 
@@ -18,6 +16,7 @@ func AddUserCredential(loginName string,pwd string) error{
 	if err != nil{
 		return err
 	}
+
 	defer stmtIns.Close()
 	return nil
 }
